@@ -10,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.tamplo.qa.utils.TestUtils;
 
@@ -21,7 +23,7 @@ public class TestBase
 	
 	public TestBase() throws IOException
 	{
-		System.out.println("parent class constructor");
+		
 		try {
 			
 			prob = new Properties();
@@ -43,7 +45,7 @@ public class TestBase
 		
 		String browsername = prob.getProperty("browser");
 		
-		if(browsername.equals("Chrome")) 
+		if(browsername.equals("chrome")) 
 		{
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\eclipse-workspace\\Tamplo5\\drivers\\chromedriver.exe");
 			driver =  new ChromeDriver();
@@ -51,9 +53,16 @@ public class TestBase
 		}else 
 			if (browsername.equals("firefox")) 
 			{
-				System.setProperty("webdriver.gecko,driver", "");
+				System.setProperty("webdriver.gecko.driver", "C:\\Users\\Admin\\git\\Tamplo.5.0\\Tamplo5\\drivers\\geckodriver.exe");
 				driver = new FirefoxDriver();
-			}
+			}else 
+			
+		if (browsername.equals("ie")) 
+		{
+			System.setProperty("webdriver.ie.driver", "C:\\Users\\Admin\\git\\Tamplo.5.0\\Tamplo5\\drivers\\IEDriverServer.exe");
+			
+			driver = new InternetExplorerDriver();
+		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGELOAD, TimeUnit.SECONDS);

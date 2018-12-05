@@ -28,7 +28,7 @@ public class LoginTest extends TestBase
 	}
 	
 	@Test
-	public void loginTestone()
+	public void loginTestone() throws IOException
 	{
 		homePage = loginPage.login(prob.getProperty("username"), prob.getProperty("password"));
 	}

@@ -35,7 +35,7 @@ public class LoginPage extends TestBase
 	WebElement  loginbutton;
 	
 	
-	public HomePage login(String username,String passwrd)
+	public HomePage login(String username,String passwrd) throws IOException
 	{
 		signinbutton.click();
 		emailfield.sendKeys(username);
