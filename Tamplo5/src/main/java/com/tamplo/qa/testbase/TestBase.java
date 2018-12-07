@@ -65,6 +65,7 @@ public class TestBase
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+	
 		driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGELOAD, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT, TimeUnit.SECONDS);
 		

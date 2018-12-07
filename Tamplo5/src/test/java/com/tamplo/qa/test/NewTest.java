@@ -1,4 +1,4 @@
-package com.tamplo.qa.pages;
+package com.tamplo.qa.test;
 
 
 

@@ -36,6 +36,9 @@ public class HomePage extends TestBase
 	@FindBy(xpath ="//ul[@class='mainbannerNavList']//a[@class='ng-binding'][contains(text(),'PERSONAL TASKS')]")
 	WebElement linkpersonaltask;
 	
+	@FindBy(xpath="//span[@class='pageMainHeaderTitle ng-binding']")
+	WebElement verifydprtpage;
+	
 	
 	public ActionPage clickOnActionLink()
 	{
@@ -61,7 +64,17 @@ public class HomePage extends TestBase
 	
 	public void clickOnDprtmentlink() 
 	{
+		
 		linkdprtment.click();
+		
+		
+	}
+	
+	public String veryfyDprtmentPage() 
+	{
+		String dprttitle = verifydprtpage.getText();
+		
+		return dprttitle;
 	}
 	
 	public void clickOnMettinglink() 

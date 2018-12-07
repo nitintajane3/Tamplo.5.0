@@ -23,23 +23,26 @@ public class LoginPage extends TestBase
 
 
 	@FindBy(xpath ="//button[@class='btn small btn-secondary ng-binding']")
+	WebElement signinbuttonmac;
+	
+	@FindBy(xpath="//a[@class='btn btn-secondary-outline-sm mar-right-8 mar-left-8']")
 	WebElement signinbutton;
 	
-	@FindBy(xpath="//input[@id='emailIdLoginPage']")
+	@FindBy(xpath="//input[@id='signin_email']")
 	WebElement emailfield;
 	
-	@FindBy(xpath="//input[@id='pass']")
+	@FindBy(xpath="//input[@id='signin_password']")
 	WebElement password;
 	
-	@FindBy(xpath = "//div[@class='modalFooterInner']")
+	@FindBy(xpath = "//button[@id='signin-submit']")
 	WebElement  loginbutton;
 	
 	
-	public HomePage login(String username,String passwrd) throws IOException
+	public HomePage login(String username,String passwrod) throws IOException
 	{
 		signinbutton.click();
 		emailfield.sendKeys(username);
-		password.sendKeys(passwrd);
+		password.sendKeys(passwrod);
 		loginbutton.click();
 		
 		return new HomePage();
