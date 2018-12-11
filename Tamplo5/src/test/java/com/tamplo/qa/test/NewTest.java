@@ -5,7 +5,7 @@ package com.tamplo.qa.test;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
-
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 import com.tamplo.qa.testbase.TestBase;
@@ -25,7 +25,15 @@ public NewTest() throws IOException {
 @Test
   public void f() throws IOException 
   {
-	initialization();
+	
+	
+	
+	System.setProperty("webdriver.gecko.driver", "C:\\Users\\Admin\\git\\Tamplo.5.0\\Tamplo5\\drivers\\geckodriver.exe");
+	FirefoxDriver driver1 = new FirefoxDriver();
+	driver1.manage().window().maximize();
+	driver1.getTitle();
+	driver1.manage().deleteAllCookies();
+	driver1.get(prob.getProperty("url"));
 	
 	System.out.println(bulde.getString("url")+ " ur get from magic ");
 	  

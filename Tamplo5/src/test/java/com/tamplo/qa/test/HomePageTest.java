@@ -31,7 +31,7 @@ public class HomePageTest extends TestBase
 		
 		loginPage = new LoginPage();
 		
-		loginPage.login(prob.getProperty("username"), prob.getProperty("password"));
+		loginPage.login(prob.getProperty("username3"), prob.getProperty("password"));
 		
 	}
 	
