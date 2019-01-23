@@ -2,6 +2,7 @@ package com.tamplo.qa.pages;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.tamplo.qa.testbase.TestBase;
 
 import net.bytebuddy.asm.Advice.This;
+import sun.awt.datatransfer.DataTransferer.ReencodingInputStream;
 
 public class LoginPage extends TestBase
 {
@@ -21,20 +23,19 @@ public class LoginPage extends TestBase
 		// TODO Auto-generated constructor stub
 	}
 
-
 	@FindBy(xpath ="//button[@class='btn small btn-secondary ng-binding']")
 	WebElement signinbuttonmac;
 	
-	@FindBy(xpath="//a[@class='btn btn-secondary-outline-sm mar-right-8 mar-left-8']")
+	@FindBy(xpath="//button[@class='btn small btn-secondary ng-binding']")
 	WebElement signinbutton;
 	
-	@FindBy(xpath="//input[@id='signin_email']")
+	@FindBy(xpath="//input[@id='emailIdLoginPage']")
 	WebElement emailfield;
 	
-	@FindBy(xpath="//input[@id='signin_password']")
+	@FindBy(xpath="//input[@id='pass']")
 	WebElement password;
 	
-	@FindBy(xpath = "//button[@id='signin-submit']")
+	@FindBy(xpath = "//button[@id='submitButton']")
 	WebElement  loginbutton;
 	
 	

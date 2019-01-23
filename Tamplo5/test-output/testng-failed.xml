@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [example suite 1]">
-  <listeners>
-    <listener class-name="com.qa.extentreportlistener.ExtentReporterNG"/>
-  </listeners>
-  <test name="Regression suite 1(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.tamplo.qa.test.HomePageTest">
+      <class name="com.tamplo.qa.excelreadcode.ReadDataFromExcelSheet">
         <methods>
-          <include name="Test"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="testcaserun" invocation-numbers="2"/>
+          <include name="logintstcase"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.tamplo.qa.test.HomePageTest -->
-      <class name="com.tamplo.qa.test.LoginTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialiseBrowser"/>
-          <include name="loginTestone"/>
-        </methods>
-      </class> <!-- com.tamplo.qa.test.LoginTest -->
+      </class> <!-- com.tamplo.qa.excelreadcode.ReadDataFromExcelSheet -->
     </classes>
-  </test> <!-- Regression suite 1(failed) -->
-</suite> <!-- Failed suite [example suite 1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

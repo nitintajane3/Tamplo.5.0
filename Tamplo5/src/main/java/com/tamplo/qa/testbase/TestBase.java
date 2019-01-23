@@ -48,10 +48,11 @@ public class TestBase
 	{
 		
 		String browsername = prob.getProperty("browser");
+		String src = System.getProperty("user.dir");
 		
 		if(browsername.equals("chrome")) 
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\eclipse-workspace\\Tamplo5\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", src+"/drivers/chromedriver.exe");
 			driver =  new ChromeDriver();
 			
 		}else 

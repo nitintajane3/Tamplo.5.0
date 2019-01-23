@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.tamplo.qa.test.HomePageTest">
+      <class name="com.tamplo.qa.excelreadcode.ReadDataFromExcelSheet">
         <methods>
-          <include name="Test"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="testcaserun" invocation-numbers="2"/>
+          <include name="logintstcase"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.tamplo.qa.test.HomePageTest -->
+      </class> <!-- com.tamplo.qa.excelreadcode.ReadDataFromExcelSheet -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
